@@ -1,0 +1,12 @@
+{
+  "name" : "css_browser_selector",
+  "version" : "0.5.0",
+  "description" : "A very small javascript with just one line which empower CSS selectors. It gives you the ability to write specific CSS code for each operating system and each browser.",
+  "author" : "Rafael Lima <https://github.com/rafaelp>",
+  "devDependencies" : {
+    "vows"          : "0.5.10",
+    "coffee-script" : "1.1.2",
+    "uglify-js"     : "1.0.6"
+  },
+  "engines" : {"node" : ">= 0.2.6"}
+}
