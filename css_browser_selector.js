@@ -30,50 +30,42 @@ Forked by:
           (!(/opera|webtv/i.test(ua)) && /msie\s(\d)/.test(ua)) ?
             ('ie ie' + RegExp.$1)
             :
-            is('firefox/2') ?
-              g + ' ff2'
+            is(/firefox\/([^0-1]|\d{2,})/i) ? // Matches Firefox 2+
+              g + ' ff' + ua.match(/firefox\/([^0-1]|\d{2,})/i)[1] +
+                ( is(/firefox\/3\.[56]/) ? ' ff3_' + ua.match(/firefox\/3\.(\d)/)[1] : '' ) // Special case 3.5 and 3.6
               :
-              is('firefox/3.5') ?
-                g + ' ff3 ff3_5'
+              is('gecko/') ?
+                g
                 :
-                is('firefox/3.6') ?
-                  g + ' ff3 ff3_6'
-                  :
-                  is('firefox/3') ?
-                    g + ' ff3'
+                is('opera') ?
+                  o + (/version\/(\d+)/.test(ua) ?
+                    ' ' + o + RegExp.$1
                     :
-                    is('gecko/') ?
-                      g
+                    (/opera(\s|\/)(\d+)/.test(ua) ?
+                      ' ' + o + RegExp.$2 : ''))
                       :
-                      is('opera') ?
-                        o + (/version\/(\d+)/.test(ua) ?
-                          ' ' + o + RegExp.$1
+                      is('konqueror') ?
+                        'konqueror'
+                        :
+                        is('blackberry') ?
+                          m + ' blackberry'
                           :
-                          (/opera(\s|\/)(\d+)/.test(ua) ?
-                            ' ' + o + RegExp.$2 : ''))
+                          is('android') ?
+                            m + ' android'
                             :
-                            is('konqueror') ?
-                              'konqueror'
+                            is('chrome') ?
+                              w + ' chrome'
                               :
-                              is('blackberry') ?
-                                m + ' blackberry'
+                              is('iron') ?
+                                w + ' iron'
                                 :
-                                is('android') ?
-                                  m + ' android'
+                                is('applewebkit/') ?
+                                  w + ' ' + s + (/version\/(\d+)/.test(ua) ? ' ' + s + RegExp.$1 : '')
                                   :
-                                  is('chrome') ?
-                                    w + ' chrome'
+                                  is('mozilla/') ?
+                                    g
                                     :
-                                    is('iron') ?
-                                      w + ' iron'
-                                      :
-                                      is('applewebkit/') ?
-                                        w + ' ' + s + (/version\/(\d+)/.test(ua) ? ' ' + s + RegExp.$1 : '')
-                                        :
-                                        is('mozilla/') ?
-                                          g
-                                          :
-                                          '',
+                                    '',
           is('j2me') ?
             m + ' j2me'
             :
