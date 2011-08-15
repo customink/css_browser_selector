@@ -24,12 +24,12 @@ vows.describe('Miscellaneous versions of IE').addBatch(
             'should be identifiable' : (selector) ->
               assert.equal( selector, "ie ie5 win" )
 
-        'XP' :
-          'IE' :
-            '4' :
-              topic : detect("Mozilla/4.0 (compatible; MSIE 4.01; Windows NT 5.0)")
-              'should be identifiable' : (selector) ->
-                assert.equal( selector, 'ie ie4 win' )
+      'XP' :
+        'IE' :
+          '4' :
+            topic : detect("Mozilla/4.0 (compatible; MSIE 4.01; Windows NT 5.0)")
+            'should be identifiable' : (selector) ->
+              assert.equal( selector, 'ie ie4 win xp' )
 
 
       'OS X' :
