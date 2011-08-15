@@ -16,19 +16,19 @@ vows.describe('Firefox').addBatch(
         'Dev' :
           topic : detect("Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9b2pre) Gecko/2007120505 Minefield/3.0b2pre")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "gecko win" )
+            assert.equal( selector, "gecko win xp" )
         'pre v1' :
           topic : detect("Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7.3) Gecko/20041002 Firefox/0.10.1")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "gecko win" )
+            assert.equal( selector, "gecko win xp" )
         '1' :
           topic : detect("Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7.13) Gecko/20060410 Firefox/1.0.8")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "gecko win" )
+            assert.equal( selector, "gecko win xp" )
         '3' :
           topic : detect("Mozilla/5.0 (Windows; u; Windows NT 5.1; en-us; rv:1.9.0.1) Gecko/2008070208 Firefox/3.0.1")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "gecko ff3 win" )
+            assert.equal( selector, "gecko ff3 win xp" )
         'Firebird' :
           topic : detect("Mozilla/5.0 (X11; U; SunOS sun4m; en-US; rv:1.4b) Gecko/20030517 Mozilla Firebird/0.6")
           'should be identifiable' : (selector) ->
@@ -36,7 +36,7 @@ vows.describe('Firefox').addBatch(
         'Phoenix' :
           topic : detect("Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.2b) Gecko/20020923 Phoenix/0.1")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "gecko win" )
+            assert.equal( selector, "gecko win xp" )
 
       'Vista' :
         'Firefox' :

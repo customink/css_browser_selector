@@ -10,11 +10,11 @@ vows.describe('Chrome').addBatch(
         'Unknown Version' :
           topic : detect("Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.A.B.C Safari/525.13")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, 'webkit chrome win' )
+            assert.equal( selector, 'webkit chrome win xp' )
         '0.2' :
           topic : detect("Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.2.149.27 Safari/525.13")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, 'webkit chrome win' )
+            assert.equal( selector, 'webkit chrome win xp' )
     'OS X' :
       '13.0' :
         topic : detect("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.112 Safari/535.1")

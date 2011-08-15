@@ -105,49 +105,49 @@ vows.describe('Safari').addBatch(
         '7' :
           topic : detect("Opera/7.11 (Windows NT 5.1; U) [en]")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "opera opera7 win" )
+            assert.equal( selector, "opera opera7 win xp" )
         '7.54' : # Opera 7.54 in native mode
           topic : detect("Opera/7.54 (Windows NT 5.1; U) [pl]")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "opera opera7 win" )
+            assert.equal( selector, "opera opera7 win xp" )
         '7.60' :
           topic : detect("Opera/7.60 (Windows NT 5.2; U) [en] (IBM EVV/3.0/EAK01AG9/LE)")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "opera opera7 win" )
+            assert.equal( selector, "opera opera7 win xp" )
         '8.01' : # Preview
           topic : detect("Opera/8.01 (Windows NT 5.1)")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "opera opera8 win" )
+            assert.equal( selector, "opera opera8 win xp" )
         '9.0' :
           topic : detect("Opera/9.0 (Windows NT 5.1; U; en)")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "opera opera9 win" )
+            assert.equal( selector, "opera opera9 win xp" )
         '9.00' :
           topic : detect("Opera/9.00 (Windows NT 5.1; U; en)")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "opera opera9 win" )
+            assert.equal( selector, "opera opera9 win xp" )
 
       'XP Pro' :
         '8.00' : # Opera 8.00 (ex 7.60 preview) on XP Pro
           topic : detect("Opera/8.00 (Windows NT 5.1; U; en)")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "opera opera8 win" )
+            assert.equal( selector, "opera opera8 win xp" )
         '8.00 as Mozilla' : # Opera 8.00 (ex 7.60 preview) on XP Pro as Mozilla
           topic : detect("Mozilla/5.0 (Windows NT 5.1; U; en) Opera 8.00")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "opera opera8 win" )
+            assert.equal( selector, "opera opera8 win xp" )
         '8.00 as MSIE' : # Opera 8.00 (ex 7.60 preview) on XP Pro as MSIE
           topic : detect("Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; en) Opera 8.00")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "opera opera8 win" )
+            assert.equal( selector, "opera opera8 win xp" )
         '8.01' : 
           topic : detect("Mozilla/5.0 (Windows NT 5.1; U; en) Opera 8.01")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "opera opera8 win" )
+            assert.equal( selector, "opera opera8 win xp" )
         '9.0 as MSIE' :
           topic : detect("Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; en) Opera 9.0")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "opera opera9 win" )
+            assert.equal( selector, "opera opera9 win xp" )
 
       'Vista' :
         '10.0' :

@@ -15,18 +15,18 @@ vows.describe('Obscure Browsers').addBatch(
         'HotJava' :
           topic : detect("Mozilla/3.0 (x86 [en] Windows NT 5.1; Sun)")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "gecko win" )
+            assert.equal( selector, "gecko win xp" )
 
         'Iron' :
           topic : detect("mozilla/5.0 (windows; u; windows nt 5.1; en-us) applewebkit/530.1 (khtml, like gecko) iron/2.0.168.0 safari/530.1")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "webkit iron win" )
+            assert.equal( selector, "webkit iron win xp" )
 
       '7' :
         'Iron' :
           topic : detect("mozilla/5.0 (windows; u; windows nt 6.1; en-us) applewebkit/532.0 (khtml, like gecko) iron/3.0.197.0 safari/532.0")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, "webkit iron win" )
+            assert.equal( selector, "webkit iron win win7" )
 
       'WebTV' :
         topic : detect("Mozilla/4.0 WebTV/2.8 (compatible; MSIE 4.0)")

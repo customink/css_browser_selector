@@ -15,7 +15,11 @@ Forked by:
   var detect = function(u) {
     var ua = u.toLowerCase(),
         is = function(t) {
-          return ua.indexOf(t) > -1
+          if( typeof t == 'string') {
+            return ua.indexOf(t) > -1
+          } else {
+            return t.test(ua);
+          }
         },
         g = 'gecko',
         w = 'webkit',
@@ -92,7 +96,16 @@ Forked by:
                         'webtv'
                         :
                         is('win') ?
-                          'win' + (is('windows nt 6.0') ?' vista' : '')
+                          'win' + (is('windows nt 6.0') ?
+                            ' vista'
+                            :
+                            (is(/windows nt 5\.[1-2]/i)) ?
+                              ' xp'
+                              :
+                              (is('windows nt 6.1')) ?
+                                ' win7'
+                                :
+                                (is('windows nt 6.2')) ? ' win8' : '')
                           :
                           is('freebsd') ?
                             'freebsd'

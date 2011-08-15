@@ -10,12 +10,12 @@ vows.describe('Safari').addBatch(
         '3.0.2b' :
           topic : detect("Mozilla/5.0 (Windows; U; Windows NT 5.1; bg) AppleWebKit/522.13.1 (KHTML, like Gecko) Version/3.0.2 Safari/522.13.1")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, 'webkit safari safari3 win' )
+            assert.equal( selector, 'webkit safari safari3 win xp' )
       'XP SP2' :
         '3.0b' :
           topic : detect("Mozilla/5.0 (Windows; U; Windows NT 5.1; ru) AppleWebKit/522.11.3 (KHTML, like Gecko) Version/3.0 Safari/522.11.3")
           'should be identifiable' : (selector) ->
-            assert.equal( selector, 'webkit safari safari3 win' )
+            assert.equal( selector, 'webkit safari safari3 win xp' )
       'Vista' :
         '4' :
           topic : detect("mozilla/5.0 (windows; u; windows nt 6.0; pt-br) applewebkit/528.16 (khtml, like gecko) version/4.0 safari/528.16")
